@@ -10,9 +10,16 @@ for (let i = 0; i < 16 * 16; i++) {
     const gridItem = document.createElement('div');
     gridItem.classList.add('grid-item');
 
+    // Add hover effect using classList
+    gridItem.addEventListener('mouseover', function() {
+        this.classList.add('hovered');
+    });
+
     // Add grid item to container
     gridContainer.appendChild(gridItem);
 }
 
 // Add grid container to main container
 container.appendChild(gridContainer);
+
+// Addng hovering effect to the grids
